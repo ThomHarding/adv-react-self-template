@@ -4,15 +4,15 @@ import {
     Route,
     Navigate,
   } from 'react-router-dom';
-  import Other from './other/other.jsx';
-  import Home from './home/home.jsx';
-  import Header from './home/header/header.jsx';
+  import Other from './Other/Other.jsx';
+  import Home from './Home/Home.jsx';
+  import Header from './Home/Header/Header.jsx';
   
 
 export default function App() {
   return (
     <Router>
-      <header />
+      <Header />
       <Routes>
           <Route index element={<Home />} />
           <Route path="other" element={<Other />} />
