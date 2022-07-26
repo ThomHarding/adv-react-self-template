@@ -1,4 +1,4 @@
-import styles from './other.css';
+import styles from './Other.css';
 
 export default function Other() {
   return (

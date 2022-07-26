@@ -1,5 +1,6 @@
 .Other {
     margins: 20px;
     display: flex;
+    color: red;
     flex-display: space-around;
 }

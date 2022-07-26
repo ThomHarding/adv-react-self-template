@@ -16,6 +16,7 @@ const env = Object.entries({
 // eslint-disable-next-line
 module.exports = {
   entry: './src/index.jsx',
+  mode: 'development',
   output: {
     filename: 'bundle.[hash].js',
     path: path.resolve(__dirname, './dist'),
