@@ -8,7 +8,7 @@ export default function Header() {
         <Link to="/">Home</Link>
         <h1 className={styles.centerItem}>My App</h1>
         <Link to="other">Other</Link>
-    </nav>
+      </nav>
     </header>
   );
 }
