@@ -24,6 +24,10 @@
   }
 }
 
+.centerItem {
+  padding: 30px;
+}
+
 .Navigation {
     display: flex;
     flex-direction: column;
