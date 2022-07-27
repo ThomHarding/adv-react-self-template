@@ -6,8 +6,8 @@ import {
 } from 'react-router-dom';
 import Other from './Other/Other.jsx';
 import Home from './Home/Home.jsx';
-import Header from './Home/Header/Header.jsx';
-  
+import Header from './Header/Header.jsx';
+import Forms from './Forms/Forms.jsx';
 
 export default function App() {
   return (
@@ -16,6 +16,7 @@ export default function App() {
       <Routes>
         <Route index element={<Home />} />
         <Route path="other" element={<Other />} />
+        <Route path="forms" element={<Forms />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router>
