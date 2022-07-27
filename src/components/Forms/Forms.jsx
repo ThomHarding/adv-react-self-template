@@ -14,7 +14,7 @@ export default function Forms() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log('form submitted');
+    console.log('form submitted'); // eslint-disable-line no-console
   }
 
   return (
