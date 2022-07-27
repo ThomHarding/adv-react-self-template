@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import styles from './Header.css';
+import '../../Layout/reset.css';
+import '../../Layout/global.css';
 
 export default function Header() {
   return (
