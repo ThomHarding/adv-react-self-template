@@ -2,7 +2,6 @@
     margins: 20px;
     padding: var(--padding);
     display: flex;
-    color: red;
     flex-direction: column;
     align-items: center;
     justify-content: center;

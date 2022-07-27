@@ -2,7 +2,6 @@
     margins: 10px;
     padding: var(--padding);
     display: flex;
-    flex-display: space-between;
     justify-content: center;
     font-family: var(--primary-font);
 }

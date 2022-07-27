@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: center;
   background: var(--header-color);
+  margin-bottom: var(--padding);
 
   .NavigationContainer {
     display: none;
@@ -26,7 +27,7 @@
 
 .centerItem {
   padding: 30px;
-  font-family: var(--secondary-font);
+  color: var(--offset-color);
 }
 
 .Navigation {
