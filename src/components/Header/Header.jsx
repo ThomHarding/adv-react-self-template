@@ -11,6 +11,7 @@ export default function Header() {
         <Link to="forms">Form Inputs</Link>
         <h1 className={styles.centerItem}>My App</h1>
         <Link to="other">Other</Link>
+        <Link to="pokedex">Pokédex</Link>
       </nav>
     </header>
   );
