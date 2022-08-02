@@ -32,3 +32,12 @@ export async function updateMonster(newName, monster) {
     .single();
   return response;
 }
+
+export async function removeMonster(id) {
+  const response = await client
+    .from('Monsters')
+    .delete()
+    .eq('id', id)
+    .single();
+  return response;
+}

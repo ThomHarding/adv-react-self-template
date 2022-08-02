@@ -4,10 +4,12 @@ import { InputControl } from '../Forms/FormControls';
 import styles from './Monster.css';
 
 export default function Monster({ monster }) {
-  const { update } = useMonsterActions();
+  const { remove, update } = useMonsterActions();
   const componentRef = useRef();
   const [editing, setEditing] = useState(false);
   const [name, setName] = useState(monster.Name);
+
+  const handleRemove = () => remove(monster.id);
 
   const handleDoubleClick = () => {
     setEditing(true);
@@ -51,6 +53,7 @@ export default function Monster({ monster }) {
                 '\nCR: ' + monster.CR,
                 '\nHP: ' + monster.HP]
             }
+            <button onClick={handleRemove}>ⓧ</button>
           </p>
         )}
       </span>

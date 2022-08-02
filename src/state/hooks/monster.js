@@ -4,6 +4,7 @@ import {
   getMonsters,
   addMonster,
   updateMonster,
+  removeMonster,
 } from '../services/monster-service.js';
 import { showSuccess, showError } from '../services/toaster.js';
 
@@ -67,5 +68,10 @@ export function useMonsterActions() {
     success: (data) => `Updated ${data.Name}`,
   });
 
-  return { add, update };
+  const remove = createAction({
+    service: removeMonster,
+    type: 'remove',
+    success: (data) => `Removed ${data.Name}`,
+  });
+  return { add, update, remove };
 }
