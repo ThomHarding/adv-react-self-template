@@ -3,6 +3,7 @@ import { MonsterContext } from '../context/monsterContext.jsx';
 import {
   getMonsters,
   addMonster,
+  updateMonster,
 } from '../services/monster-service.js';
 import { showSuccess, showError } from '../services/toaster.js';
 
@@ -60,6 +61,11 @@ export function useMonsterActions() {
     success: (data) => `Added ${data.Name}`,
   });
 
+  const update = createAction({
+    service: updateMonster,
+    type: 'update',
+    success: (data) => `Updated ${data.Name}`,
+  });
 
-  return { add };
+  return { add, update };
 }

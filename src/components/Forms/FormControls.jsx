@@ -1,3 +1,4 @@
+import { forwardRef } from 'react';
 import styles from './FormControls.css';
 import classNames from 'classnames'; //not sure what this does honestly
 
@@ -46,17 +47,16 @@ export function CheckboxControl({ label, text, ...rest }) {
   );
 }
 
-export function InputControl({
-  label,
-  className,
-  ...rest
-}) {
-  return (
-    <FormControl label={label} className={className}>
-      <input {...rest} />
-    </FormControl>
-  );
-}
+export const InputControl = forwardRef(
+  ({ label, className, value, ...rest }, ref) => {
+    return (
+      <FormControl label={label} className={className}>
+        <input ref={ref} value={value || ''} {...rest} />
+      </FormControl>
+    );
+  }
+);
+InputControl.displayName = 'InputControl';
 
 export function SelectControl({
   label,
