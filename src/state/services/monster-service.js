@@ -11,3 +11,11 @@ export async function getMonsters() {
 
   return response;
 }
+
+export async function addMonster(monster) {
+  const response = await client
+    .from('Monsters')
+    .insert(monster)
+    .single();
+  return response;
+}

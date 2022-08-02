@@ -6,6 +6,8 @@ function reducer(list, { type, payload }) {
   switch (type) {
     case 'load':
       return payload;
+    case 'add':
+      return [...list, payload];
     default:
       throw Error(`Unknown action: ${type}`);
   }
