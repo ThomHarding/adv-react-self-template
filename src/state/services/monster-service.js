@@ -15,9 +15,13 @@ export async function getMonsters() {
 }
 
 export async function addMonster(monster) {
+  const newMonster = { ...monster,
+    Speed: '30 ft.',
+    Size: 'Medium',
+    RA: 'humanoid, Any Alignment' };
   const response = await client
     .from('Monsters')
-    .insert(monster)
+    .insert(newMonster)
     .single();
   return response;
 }
