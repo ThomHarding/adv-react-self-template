@@ -23,7 +23,7 @@ export default function App() {
         <Header />
         <MonsterProvider>
           <Routes>
-            <Route path="user/*" element={<UserAuth />} />
+            <Route path="auth/*" element={<UserAuth />} />
             <Route index element={<Home />} />
             <Route path="other" element={<Other />} />
             <Route path="pokedex" element={<Pokedex />} />

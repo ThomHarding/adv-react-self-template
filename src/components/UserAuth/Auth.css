@@ -8,8 +8,12 @@
       background: var(--offset-color);
       padding: 30px 60px;
       width: 500px;
-  
+      color: var(--header-color);
       display: grid;
       row-gap: 25px;
+    }
+
+    button {
+      color: var(--header-color);
     }
   }

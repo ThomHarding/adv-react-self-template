@@ -47,12 +47,12 @@ export function removeLocalProfile() {
 export async function getProfile() {
   //from supabase
   const user = getUser();
-
-  return await client
+  const response = await client
     .from('profiles')
     .select()
     .eq('id', user.id)
     .single();
+  return response;
 }
 
 export async function upsertProfile(profile) {
