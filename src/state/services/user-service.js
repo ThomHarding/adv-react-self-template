@@ -1,4 +1,4 @@
-import client from './supabase-client.js';
+import client from './client.js';
 
 export function getUser() {
   return client.auth.user();
@@ -57,7 +57,7 @@ export async function getProfile() {
 
 export async function upsertProfile(profile) {
   //to supabase
-  //'upsert' being 'update if it's there, insert if it's not'
+  //'upsert' being 'update if it's there, insert if it's not
   const response = await client
     .from('profiles')
     .upsert(profile)

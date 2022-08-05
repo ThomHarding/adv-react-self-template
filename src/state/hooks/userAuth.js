@@ -10,7 +10,7 @@ import { showError, showSuccess } from '../services/toaster.js';
 import {
   UserStateContext,
   UserActionContext,
-} from '../context/UserContext.jsx';
+} from '../context/userContext.jsx';
 
 export function useStatus() {
   //shorthand to fetch user status
