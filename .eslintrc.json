@@ -25,6 +25,7 @@
     "plugins": ["babel", "react"],
     "extends": ["eslint:recommended", "plugin:react/recommended"],
     "rules": {
+      "react/prop-types": "off",
       "no-console": "warn",
       "indent": [
         "error",

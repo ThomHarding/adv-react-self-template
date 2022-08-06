@@ -1,10 +1,11 @@
 import styles from './Other.css';
+import '../Layout/reset.css';
+import '../Layout/global.css';
 
 export default function Other() {
   return (
     <div className={styles.Other}>
       <p>another page of content</p>
-      <img url='public\logo.svg' alt='the react logo'/>
     </div>
   );
 }

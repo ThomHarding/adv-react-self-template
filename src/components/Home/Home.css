@@ -1,3 +1,7 @@
 .Home {
     margins: 10px;
+    padding: var(--padding);
+    display: flex;
+    justify-content: center;
+    font-family: var(--primary-font);
 }
