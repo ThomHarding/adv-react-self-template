@@ -45,7 +45,7 @@ function AuthForm({ header, button, prompt, link, onSubmit }) {
 
   return (
     <section className={styles.Auth}>
-      <Link to="user" onClick={signOut}>
+      <Link className={styles.signout} to="user" onClick={signOut}>
           Sign Out
       </Link>
       <form onSubmit={handleSubmit}>

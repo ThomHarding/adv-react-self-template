@@ -1,15 +1,28 @@
 import client from './client.js';
 
+function moveIfStoredLocation() {
+  //move you to where you tried to go before you logged in
+  const location = localStorage.getItem('location');
+  if (location) {
+    localStorage.removeItem('location');
+    window.location.replace(location);
+  }
+}
+
 export function getUser() {
   return client.auth.user();
 }
 
 export async function signUp(credentials) {
-  return await client.auth.signUp(credentials);
+  const signedUp = await client.auth.signUp(credentials);
+  moveIfStoredLocation();
+  return signedUp;
 }
 
 export async function signIn(credentials) {
-  return await client.auth.signIn(credentials);
+  const signedIn = await client.auth.signIn(credentials);
+  moveIfStoredLocation();
+  return signedIn;
 }
 
 export async function signOut() {
@@ -65,6 +78,7 @@ export async function upsertProfile(profile) {
   return response;
 }
 
+//none of the avatar stuff matters or is used but i'm keeping it
 const BUCKET_NAME = 'avatars';
 
 export async function uploadAvatar(userId, imageFile) {
