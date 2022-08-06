@@ -5,6 +5,7 @@ import {
 } from '../../components/Forms/FormControls.jsx';
 import { useForm } from '../../state/hooks/formData.js';
 import { useAuth } from '../../state/hooks/userAuth.js';
+import { signOut } from '../../state/services/user-service.js';
 import styles from './Auth.css';
 
 export default function Auth() {
@@ -44,6 +45,9 @@ function AuthForm({ header, button, prompt, link, onSubmit }) {
 
   return (
     <section className={styles.Auth}>
+      <Link to="user" onClick={signOut}>
+          Sign Out
+      </Link>
       <form onSubmit={handleSubmit}>
         <h1>{header}</h1>
 

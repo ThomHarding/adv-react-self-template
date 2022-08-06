@@ -4,6 +4,7 @@ import {
   Route,
   Navigate,
 } from 'react-router-dom';
+import ProtectedRoutes from './UserAuth/ProtectRoutes.jsx';
 import { Toaster } from 'react-hot-toast';
 import Other from './Other/Other.jsx';
 import Home from './Home/Home.jsx';
@@ -23,13 +24,15 @@ export default function App() {
         <Header />
         <MonsterProvider>
           <Routes>
-            <Route path="auth/*" element={<UserAuth />} />
-            <Route index element={<Home />} />
-            <Route path="other" element={<Other />} />
-            <Route path="pokedex" element={<Pokedex />} />
-            <Route path="monsters" element={<MonsterList />} />
-            <Route path="forms" element={<Forms />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
+            <Route path="user/*" element={<UserAuth />} />
+            <Route element={<ProtectedRoutes />}>
+              <Route index element={<Home />} />
+              <Route path="other" element={<Other />} />
+              <Route path="pokedex" element={<Pokedex />} />
+              <Route path="monsters" element={<MonsterList />} />
+              <Route path="forms" element={<Forms />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </Route>
           </Routes>
         </MonsterProvider>
       </Router>

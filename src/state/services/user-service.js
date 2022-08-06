@@ -50,8 +50,7 @@ export async function getProfile() {
   const response = await client
     .from('profiles')
     .select()
-    .eq('id', user.id)
-    .single();
+    .eq('id', user.id);
   return response;
 }
 
