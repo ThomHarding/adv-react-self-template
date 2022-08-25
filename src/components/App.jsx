@@ -14,7 +14,6 @@ import Pokedex from './Pokedex/Pokedex.jsx';
 import MonsterList from './Monsters/MonsterList.jsx';
 import MonsterProvider from '../state/context/monsterContext.jsx';
 import UserProvider from '../state/context/userContext.jsx';
-import UserAuth from './UserAuth/UserAuth.jsx';
 
 export default function App() {
   return (
@@ -24,15 +23,11 @@ export default function App() {
         <Header />
         <MonsterProvider>
           <Routes>
-            <Route path="user/*" element={<UserAuth />} />
-            <Route element={<ProtectedRoutes />}>
-              <Route index element={<Home />} />
-              <Route path="other" element={<Other />} />
-              <Route path="pokedex" element={<Pokedex />} />
-              <Route path="monsters" element={<MonsterList />} />
-              <Route path="forms" element={<Forms />} />
-              <Route path="*" element={<Navigate to="/" replace />} />
-            </Route>
+            <Route index element={<Home />} />
+            <Route path="other" element={<Other />} />
+            <Route path="monsters" element={<MonsterList />} />
+            <Route path="forms" element={<Forms />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </MonsterProvider>
       </Router>
